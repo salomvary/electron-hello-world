@@ -3,5 +3,5 @@ os:
   - osx
 language: node_js
 node_js:
-  - nodejs
+  - node
 script: npm run build
