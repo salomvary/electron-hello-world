@@ -1,0 +1,18 @@
+{
+  "name": "electron-hello-world",
+  "version": "0.0.1",
+  "author": "Hello World",
+  "description": "Electron Hello World",
+  "main": "main.js",
+  "scripts": {
+    "build": "build",
+    "test": "npm test",
+    "start": "electron ."
+  },
+  "build": {},
+  "devDependencies": {
+    "electron": "*",
+    "electron-builder": "*"
+  },
+  "private": true
+}
