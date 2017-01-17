@@ -1,6 +1,8 @@
 # Test against the latest version of this Node.js version
 environment:
   nodejs_version: "6"
+  GH_TOKEN:
+    secure: jKe9nhqsvl31Uvks2gNUxpcWvZyHq35bxlV8Nk+i3TbQosPAwfRIwpsrilyM2U3v
 
 # Install scripts. (runs after repo cloning)
 install:
