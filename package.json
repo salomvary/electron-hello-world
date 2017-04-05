@@ -6,6 +6,7 @@
   "main": "main.js",
   "scripts": {
     "build": "build",
+    "release": "build",
     "test": "npm test",
     "start": "electron ."
   },
