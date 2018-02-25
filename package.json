@@ -1,6 +1,6 @@
 {
   "name": "electron-hello-world",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Hello World",
   "description": "Electron Hello World",
   "main": "main.js",
