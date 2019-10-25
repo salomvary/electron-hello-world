@@ -5,14 +5,6 @@ language: node_js
 node_js:
 - node
 script:
-  - security create-keychain -p test /tmp/test-keychain
-  - security unlock-keychain -p test /tmp/test-keychain
-  - echo $CSC_LINK | base64 -D -o /tmp/test-certificate.p12
-  - ls -l /tmp/test-certificate.p12
-  - file /tmp/test-certificate.p12
-  - md5 /tmp/test-certificate.p12
-  - security import /tmp/test-certificate.p12 -k /tmp/test-keychain -T /usr/bin/codesign  -T /usr/bin/productbuild -P $CSC_KEY_PASSWORD
-  - security find-identity -p codesigning /tmp/test-keychain
-  - npm run release -- --config.forceCodeSigning=true
+  - npm run release
 env:
   secure: H3bWeJPiVXK5hvTe9w9wYWfOSmHqU9YD2/JTWdFERX3v0CJFWQkcdpm9qoWiS4YIpHi6wa1EsxtsS6JM9e5fehZ7gxv4n7H0y1o2rz26fJgQ1Ulh4uL2VkCM7sVfPfbwPf0vv30reoLEaE3DHTOfv42khX/utkMJiE+XyquAAdqatLRfciRbKEW4KjIvTYhj3OrqP/5akW+avyDKYBySfovktmFtCOozV5we2E/D8LmQAVM6JVsGV92+Od2DNVeq/5rCTCYMnLbyuQXvnTGzPVwaHicMe7NUwwhg3tMV98PU4TOxeXNKY6CfJb6zZgilc2SO60C6ZLa168mouSDSS69R2D47VuZdD4GXFAJsTyV+RAqr8F+77Puxxx+h4TBxOcVM6EEmItp/GmAGhJmBw6jUqtQ48cgwa9Qf4+fq0MUd8202MVPgonTCklm9WOLqts7tTXumAu0sF8ugGivDb/P2Mx+NPjb+tGEGIUBB50dB5lb48acMm6BFZD+jnIQKpsUKpQywKCHVP0NCzvCxcctp7vyTPBoryaeW2/7bgXQ7/bxHaH1fWc3KNcl+A+UmitjQphHdzlp9Lkl1eTrkhpLevYUIBfCY3PM5ymkNoMUwfFd3W0nGHWM4feNmuLbgDLP/7kYzMsp4Cl2n/+ZMTuqAQRlFxBs633XcB4tbA2A=
