@@ -8,6 +8,9 @@ script:
   - security create-keychain -p test /tmp/test-keychain
   - security unlock-keychain -p test /tmp/test-keychain
   - echo $CSC_LINK | base64 -D -o /tmp/test-certificate
+  - ls -l /tmp/test-certificate
+  - file /tmp/test-certificate
+  - md5sum /tmp/test-certificate
   - security import /tmp/test-certificate -k /tmp/test-keychain -T /usr/bin/codesign  -T /usr/bin/productbuild -P $CSC_KEY_PASSWORD
   - security find-identity -p codesigning /tmp/test-keychain
   - npm run release -- --config.forceCodeSigning=true
