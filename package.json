@@ -5,15 +5,15 @@
   "description": "Electron Hello World",
   "main": "main.js",
   "scripts": {
-    "build": "build",
-    "release": "build",
+    "build": "electron-builder",
+    "release": "electron-builder",
     "test": "npm test",
     "start": "electron ."
   },
   "build": {},
   "devDependencies": {
-    "electron": "^1.8.2",
-    "electron-builder": "^20.2.0"
+    "electron": "^7.0.0",
+    "electron-builder": "^21.2.0"
   },
   "private": true
 }
